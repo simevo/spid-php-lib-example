@@ -1,0 +1,9 @@
+/vendor/
+/sp_conf/idp_metadata/*.xml
+/sp_conf/sp.crt
+/sp_conf/sp.key
+/sp_conf/config.php
+/idp_conf/config.yaml
+/idp_conf/conf/idp.key
+/idp_conf/conf/idp.crt
+/idp_conf/users.json

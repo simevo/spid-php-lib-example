@@ -1,0 +1,19 @@
+{
+    "name": "simevo/spid-php-lib-example",
+    "description": "Demo application based on spid-php-lib",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "authors": [{
+        "name": "Paolo Greppi",
+        "email": "paolo.greppi@libpf.com"
+    }],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "italia/spid-php-lib": "dev-master#b9bbe6f930b7a7628cbbc8f32c91daa655fd6446 as 1.0"
+    },
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/italia/spid-php-lib"
+    }]
+}
