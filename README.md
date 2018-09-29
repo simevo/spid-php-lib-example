@@ -3,6 +3,7 @@
 [![Join the #spid-php channel](https://img.shields.io/badge/Slack%20channel-%23spid--php-blue.svg?logo=slack)](https://developersitalia.slack.com/messages/CB6DCK274)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 [![SPID on forum.italia.it](https://img.shields.io/badge/Forum-SPID-blue.svg)](https://forum.italia.it/c/spid)
+[![Build Status](https://travis-ci.com/simevo/spid-php-lib-example.svg?branch=master)](https://travis-ci.com/simevo/spid-php-lib-example)
 
 # spid-php-lib-example
 
@@ -18,16 +19,28 @@ Tested on: amd64 Debian 10 (buster, next stable) with Docker 18.06 and Docker Co
 
 1. Install prerequisites:
 ```sh
-apt install docker-io docker-compose
+sudo apt install docker.io docker-compose
 ```
 
 2. Run `docker-compose up --build`
 
-3. Visit: http://localhost:8099/ and click `login`.
+3. Visit the SP homepage http://localhost:8099/ and click `login` (user: `test`, password: `test`)
+
+4. Visit the IdP homepage http://localhost:8088/ to review its configuration.
 
 This screencast shows what you should see if all goes well:
 
 ![img](images/screencast.gif)
+
+To stop the two containers and remove them and all the other bits created by `docker-compose up`, run the command:
+```sh
+docker-compose down
+```
+
+If you relaunch the docker-compose after a while, make sure you run it with the latest version of the SPID test IdP:
+```sh
+docker pull italia/spid-testenv2
+```
 
 ## Authors
 
