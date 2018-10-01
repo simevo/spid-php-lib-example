@@ -55,6 +55,8 @@ final class Test1 extends PHPUnit\Framework\TestCase
         $contents = $response->getBody()->getContents();
         $validationErrors = (strpos($contents, "Errori di validazione") > 0);
         $this->assertFalse($validationErrors);
+        $login = (strpos($contents, "Login") > 0);
+        $this->assertTrue($login);
     }
 
     public function tearDown()
