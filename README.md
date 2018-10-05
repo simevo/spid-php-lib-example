@@ -11,7 +11,7 @@ This repository contains a basic demo application based on [spid-php-lib](https:
 
 The supplied [docker-compose.yml](/docker-compose.yml) file defines and runs a two-container Docker application that comprises:
 - this SPID Service Provider (SP) example
-- and the SPID test Identity Provider (IdP) [spid-testenv2](https://github.com/italia/spid-testenv2)configured to talk to each other.
+- and the SPID test Identity Provider (IdP) [spid-testenv2](https://github.com/italia/spid-testenv2) configured to talk to each other.
 
 ## Getting Started
 
