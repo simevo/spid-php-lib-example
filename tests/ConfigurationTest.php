@@ -9,12 +9,12 @@ final class ConfigurationTest extends PHPUnit\Framework\TestCase
     protected function setUp()
     {
         $this->idp = new GuzzleHttp\Client([
-            'base_uri' => 'http://localhost:8088',
+            'base_uri' => getenv('IDP_ENTITYID'),
             'http_errors' => false,
             'cookies' => true
         ]);
         $this->sp = new GuzzleHttp\Client([
-            'base_uri' => 'http://localhost:8099',
+            'base_uri' => getenv('SP_ENTITYID'),
             'http_errors' => false,
             'cookies' => true
         ]);
@@ -44,7 +44,7 @@ final class ConfigurationTest extends PHPUnit\Framework\TestCase
         $response = $this->idp->get('/');
         $this->assertEquals(200, $response->getStatusCode());
         $contents = $response->getBody()->getContents();
-        $spCheck = (strpos($contents, "http://localhost:8099") > 0);
+        $spCheck = (strpos($contents, (string) $this->sp->getConfig('base_uri')) > 0);
         $this->assertTrue($spCheck);
     }
 

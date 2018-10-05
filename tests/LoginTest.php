@@ -9,7 +9,7 @@ final class LoginTest extends PHPUnit\Framework\TestCase
         $client = new \Goutte\Client();
         // Do more configuration for the Goutte client
         $guzzleClient = new \GuzzleHttp\Client([
-            'base_uri' => 'http://localhost:8099',
+            'base_uri' => getenv('SP_ENTITYID'),
           ]);
         $client->setClient($guzzleClient);
         $driver = new \Behat\Mink\Driver\GoutteDriver($client);
@@ -54,7 +54,7 @@ final class LoginTest extends PHPUnit\Framework\TestCase
        $client = new \Goutte\Client();
        // Do more configuration for the Goutte client
         $guzzleClient = new \GuzzleHttp\Client([
-            'base_uri' => 'http://localhost:8099'
+            'base_uri' => getenv('SP_ENTITYID'),
           ]);
         $client->setClient($guzzleClient);
        $driver = new \Behat\Mink\Driver\GoutteDriver($client);
