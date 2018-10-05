@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-final class Test1 extends PHPUnit\Framework\TestCase
+final class ConfigurationTest extends PHPUnit\Framework\TestCase
 {
     protected $idp; // identity provider
     protected $sp; // service provider

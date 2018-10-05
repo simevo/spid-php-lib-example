@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-final class Test2 extends PHPUnit\Framework\TestCase
+final class LoginTest extends PHPUnit\Framework\TestCase
 {
 
     public function testLogin()
