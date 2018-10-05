@@ -7,3 +7,4 @@
 /idp_conf/conf/idp.key
 /idp_conf/conf/idp.crt
 /idp_conf/users.json
+/phpunit.xml
