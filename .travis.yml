@@ -26,4 +26,6 @@ install:
   - docker ps
 
 before_script:
-  - sleep 15
+  - source .env
+  - wget --spider --timeout=15 --retry-connrefused "$SP_ENTITYID"
+  - wget --spider --timeout=15 --retry-connrefused "$IDP_ENTITYID"
