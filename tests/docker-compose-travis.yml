@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  example:
+  spid-php-example-sp:
     build:
       context: ..
       dockerfile: ./tests/Dockerfile
@@ -15,7 +15,7 @@ services:
     networks:
       - example1
 
-  spid-testenv2:
+  spid-php-example-idp:
     image: italia/spid-testenv2
     ports:
       - 8088:8088
