@@ -9,12 +9,8 @@
     }],
     "require": {
         "php": ">=7.0",
-        "italia/spid-php-lib": "dev-master#b9bbe6f930b7a7628cbbc8f32c91daa655fd6446 as 1.0"
+        "italia/spid-php-lib": "^0.12.0"
     },
-    "repositories": [{
-        "type": "vcs",
-        "url": "https://github.com/italia/spid-php-lib"
-    }],
     "require-dev": {
         "phpunit/phpunit": "^6.5",
         "guzzlehttp/guzzle": "^6.3",
