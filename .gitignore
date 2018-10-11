@@ -1,5 +1,5 @@
 /vendor/
-/sp_conf/idp_metadata/*.xml
+/sp_conf/*.xml
 /sp_conf/sp.crt
 /sp_conf/sp.key
 /sp_conf/config.php
