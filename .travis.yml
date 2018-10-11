@@ -17,16 +17,15 @@ before_install:
   - docker pull italia/spid-testenv2
 
 install:
-  - composer install --no-interaction
   - docker --version
   - docker-compose --version
-  - docker-compose -f tests/docker-compose-travis.yml pull
-  - docker-compose -f tests/docker-compose-travis.yml up --build --no-start
-  - docker-compose -f tests/docker-compose-travis.yml start
+  - docker-compose pull
+  - docker-compose up --build --no-start
+  - docker-compose start
   - docker ps
+  - composer install --no-interaction
 
 before_script:
-  - sleep 15
-
-script:
-  - vendor/bin/phpunit tests/*.php
+  - source .env
+  - wget --spider --timeout=15 --retry-connrefused "$SP_ENTITYID"
+  - wget --spider --timeout=15 --retry-connrefused "$IDP_ENTITYID"

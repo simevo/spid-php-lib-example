@@ -1,0 +1,9 @@
+<phpunit
+  bootstrap="tests/autoload.php"
+  >
+  <testsuites>
+    <testsuite name="SPID PHP Integration Tests">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
