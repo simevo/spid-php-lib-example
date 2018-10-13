@@ -14,7 +14,7 @@ $settings = [
     'sp_assertionconsumerservice' => [
         $base . '/acs'
     ],
-    'sp_singlelogoutservice' => $base . '/slo',
+    'sp_singlelogoutservice' => [[$base . '/slo', '']],
     'sp_org_name' => 'test',
     'sp_org_display_name' => 'Test',
     'idp_metadata_folder' => './sp_conf/',
