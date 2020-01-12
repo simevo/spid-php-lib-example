@@ -42,6 +42,17 @@ If you relaunch the docker-compose after a while, make sure you run it with the 
 docker pull italia/spid-testenv2
 ```
 
+## Refreshing key/certificate pairs
+
+If on visiting http://localhost:8099/login you get "Errori di validazione. Il certificato è scaduto.", refresh key/certificate pairs for SP and IdP:
+
+```
+openssl req -x509 -nodes -sha256 -subj '/C=IT' -newkey rsa:2048 -keyout idp_conf/idp.key -out idp_conf/idp.crt
+openssl req -x509 -nodes -sha256 -days 365 -newkey rsa:2048 -subj "/C=IT/ST=Italy/L=Milan/O=myservice/CN=localhost" -keyout sp_conf/sp.key -out sp_conf/sp.crt
+wget http://localhost:8099/metadata -O idp_conf/sp_metadata.xml
+wget http://localhost:8088/metadata -O sp_conf/idp_testenv2.xml
+```
+
 ## Authors
 
 Lorenzo Cattaneo and Paolo Greppi, simevo s.r.l.
