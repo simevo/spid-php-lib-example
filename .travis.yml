@@ -1,10 +1,9 @@
 language: php
 
 php:
-  - 7.1.33
-  - 7.2.25
+  - 7.2.26
   - 7.3.12
-  - 7.4.0
+  - 7.4.1
 
 sudo: required
 
@@ -16,7 +15,7 @@ cache:
     - $HOME/.composer/cache
 
 before_install:
-  - docker pull php:7.2-apache
+  - docker pull php:7.3-apache
   - docker pull italia/spid-testenv2
 
 install:

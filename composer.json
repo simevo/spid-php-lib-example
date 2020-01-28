@@ -13,8 +13,8 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
-        "italia/spid-php-lib": "^0.34.0"
+        "php": ">=7.2",
+        "italia/spid-php-lib": "^0.35.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",
