@@ -15,7 +15,7 @@ The supplied [docker-compose.yml](/docker-compose.yml) file defines and runs a t
 
 ## Getting Started
 
-Tested on: amd64 Debian 10 (buster, next stable) with Docker 18.06 and Docker Compose 1.17.
+Tested on: amd64 Debian 10 (buster, current stable) with Docker 18.06 and Docker Compose 1.17.
 
 1. Install prerequisites:
 ```sh
